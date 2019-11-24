@@ -26,7 +26,7 @@ class Tracker
         {
             $ip_address = $_SERVER['HTTP_CLIENT_IP'];
         }
-        elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
+        elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']) && empty($_SERVER['REMOTE_ADDR']))
         {
             $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
         }
