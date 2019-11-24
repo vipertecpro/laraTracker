@@ -1,6 +1,6 @@
 # Laravel 6.* Visitor Tracker and Statistics
 
-[![Packagist](https://img.shields.io/packagist/v/vipertecpro/laravel-visitor-tracker.svg?style=flat-square)](https://packagist.org/packages/vipertecpro/laravel-visitor-tracker) [![Packagist](https://img.shields.io/packagist/dm/vipertecpro/laravel-visitor-tracker.svg?style=flat-square)](https://packagist.org/packages/vipertecpro/laravel-visitor-tracker) [![Build Status](https://travis-ci.org/vipertecpro/laravel-visitor-tracker.svg?branch=master)](https://travis-ci.org/vipertecpro/laravel-visitor-tracker) [![StyleCI](https://styleci.io/repos/116011849/shield?branch=master)](https://styleci.io/repos/116011849) [![Packagist](https://img.shields.io/packagist/l/vipertecpro/laravel-visitor-tracker.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![StyleCI](https://styleci.io/repos/116011849/shield?branch=master)](https://styleci.io/repos/116011849) [![Packagist](https://img.shields.io/packagist/l/vipertecpro/laravel-visitor-tracker.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 Track your authenticated and unauthenticated visitors, login attempts, ajax requests, and more. Includes a controller and a bunch of routes and views to display the statistics, as well as a helper class to fetch the statistics easily (in case you want to display the statistics yourself).
 
@@ -89,7 +89,7 @@ Finally, you need to start the worker that will take care of the queue. Run the 
 php artisan queue:work
 ```
 
-Read more on Queues and Jobs in the [Laravel documentation](https://laravel.com/docs/5.5/queues). [This section](https://laravel.com/docs/5.5/queues#supervisor-configuration) describes how to restart the queue worker automatically in case the process fails.
+Read more on Queues and Jobs in the [Laravel documentation](https://laravel.com/docs/6.x/queues). [This section](https://laravel.com/docs/6.x/queues#supervisor-configuration) describes how to restart the queue worker automatically in case the process fails.
 
 P.S. You need to restart the worker every time you've made changes to the package's config file.
 
