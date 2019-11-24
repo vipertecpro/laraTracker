@@ -12,7 +12,7 @@
     "require": {
         "php": "^7.2",
         "nesbot/carbon": "^2.27",
-        "piwik/device-detector": "^3.9"
+        "piwik/device-detector": "^3.12"
     },
     "require-dev": {
         "orchestra/testbench": "~3.8.0|^4.0",

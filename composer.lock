@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eee6f900cdab09a70712f988a44384f8",
+    "content-hash": "1052d7b617a1e8bc64e2c9324ff99be5",
     "packages": [
         {
             "name": "mustangostang/spyc",
