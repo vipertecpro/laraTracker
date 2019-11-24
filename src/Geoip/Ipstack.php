@@ -7,7 +7,6 @@ class Ipstack extends Driver
     protected function getEndpoint($ip)
     {
         $key = config('visitortracker.ipstack_key');
-
         return "http://api.ipstack.com/{$ip}?access_key={$key}";
     }
 

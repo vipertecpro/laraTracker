@@ -18,7 +18,24 @@ class Tracker
         'perl',
         'go-http-client',
     ];
-
+    /*
+     * Get Client Public IP Address
+     * */
+    protected static function getIpAddress() {
+        if (!empty($_SERVER['HTTP_CLIENT_IP']))
+        {
+            $ip_address = $_SERVER['HTTP_CLIENT_IP'];
+        }
+        elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
+        {
+            $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        }
+        else
+        {
+            $ip_address = $_SERVER['REMOTE_ADDR'];
+        }
+        return $ip_address;
+    }
     /**
      * Records a visit/request based on the request()
      *
@@ -39,9 +56,9 @@ class Tracker
 
         // Determine if the request is a login attempt
         if (request()->route()
-        && '/' . request()->route()->uri === config('visitortracker.login_attempt.url')
-        && $data['method'] === config('visitortracker.login_attempt.method')
-        && $data['is_ajax'] === config('visitortracker.login_attempt.is_ajax')) {
+            && '/' . request()->route()->uri === config('visitortracker.login_attempt.url')
+            && $data['method'] === config('visitortracker.login_attempt.method')
+            && $data['is_ajax'] === config('visitortracker.login_attempt.is_ajax')) {
             $data['is_login_attempt'] = true;
         }
 
@@ -173,10 +190,9 @@ class Tracker
                 $bot = ['name' => $browserFamily];
             }
         }
-
         return [
             'user_id' => auth()->check() ? auth()->id() : null,
-            'ip' => request()->ip(),
+            'ip' => self::getIpAddress(),
             'method' => request()->method(),
             'url' => request()->fullUrl(),
             'referer' => request()->headers->get('referer'),

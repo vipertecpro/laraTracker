@@ -17,7 +17,7 @@ abstract class Driver
     /**
      * Fetch data from a remote geoapi service
      *
-     * @param Voerro\Laravel\VisitorTracker\Models\Visit $visit
+     * @param
      * @return $this
      */
     public function getDataFor(Visit $visit)
@@ -28,7 +28,7 @@ abstract class Driver
 
         if ($response->getStatusCode() === 200) {
             $this->data = json_decode($response->getBody()->getContents(), true);
-
+            dd($this->data);
             return $this;
         }
 

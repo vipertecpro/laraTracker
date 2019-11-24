@@ -13,7 +13,8 @@
         "php": "^7.2",
         "guzzlehttp/guzzle": "^6.4",
         "nesbot/carbon": "^2.27",
-        "piwik/device-detector": "^3.12"
+        "piwik/device-detector": "^3.12",
+        "ext-json": "*"
     },
     "require-dev": {
         "orchestra/testbench": "~3.8.0|^4.0",
