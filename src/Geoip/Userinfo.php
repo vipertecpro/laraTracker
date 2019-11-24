@@ -11,26 +11,26 @@ class Userinfo extends Driver
 
     public function latitude()
     {
-        return $this->data->position->latitude;
+        return $this->data['position']['latitude'];
     }
 
     public function longitude()
     {
-        return $this->data->position->longitude;
+        return $this->data['position']['longitude'];
     }
 
     public function country()
     {
-        return $this->data->country->name;
+        return $this->data['country']['name'];
     }
 
     public function countryCode()
     {
-        return $this->data->country->code;
+        return $this->data['country']['code'];
     }
 
     public function city()
     {
-        return $this->data->city->name;
+        return $this->data['city']['name'];
     }
 }

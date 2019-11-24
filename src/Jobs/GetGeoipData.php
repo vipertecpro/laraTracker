@@ -85,4 +85,14 @@ class GetGeoipData implements ShouldQueue
 
         return true;
     }
+    /**
+     * The job failed to process.
+     *
+     * @param  Exception  $exception
+     * @return string
+     */
+    public function failed(Exception $exception)
+    {
+        return $exception->getMessage();
+    }
 }

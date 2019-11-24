@@ -12,26 +12,41 @@ class Ipstack extends Driver
 
     public function latitude()
     {
-        return $this->data->latitude;
+        return $this->data['latitude'];
     }
 
     public function longitude()
     {
-        return $this->data->longitude;
+        return $this->data['longitude'];
     }
 
     public function country()
     {
-        return $this->data->country_name;
+        return $this->data['country_name'];
     }
 
     public function countryCode()
     {
-        return $this->data->country_code;
+        return $this->data['country_code'];
     }
 
+    public function regionCode()
+    {
+        return $this->data['region_code'];
+    }
+
+    public function regionName()
+    {
+        return $this->data['region_name'];
+    }
+    
     public function city()
     {
-        return $this->data->city;
+        return $this->data['city'];
+    }
+
+    public function zip()
+    {
+        return $this->data['zip'];
     }
 }
