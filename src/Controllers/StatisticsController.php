@@ -4,7 +4,7 @@ namespace Vipertecpro\Laravel\VisitorTracker\Controllers;
 
 use Vipertecpro\Laravel\VisitorTracker\Models\Visit;
 use Carbon\Carbon;
-use Vipertecpro\Laravel\VisitorTracker\Facades\VisitStats;
+use Vipertecpro\Laravel\VisitorTracker\VisitStats;
 
 class StatisticsController
 {
