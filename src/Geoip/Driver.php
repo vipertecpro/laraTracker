@@ -28,7 +28,6 @@ abstract class Driver
 
         if ($response->getStatusCode() === 200) {
             $this->data = json_decode($response->getBody()->getContents(), true);
-            dd($this->data);
             return $this;
         }
 
