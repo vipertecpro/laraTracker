@@ -73,7 +73,7 @@ Since fetching data from an external API takes time, the operation is queued an 
 First, in your `.env` file you need to set:
 
 ```php
-QUEUE_DRIVER=database
+QUEUE_CONNECTION=database
 ```
 Then run these commands one after another:
 
